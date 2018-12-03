@@ -1,4 +1,4 @@
-require 'set'
+require "set"
 
 box_ids = DATA.read.split.map(&:each_char)
 counts = Hash.new(0)

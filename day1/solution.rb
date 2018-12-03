@@ -1,4 +1,4 @@
-require 'set'
+require "set"
 
 STARTING_FREQUENCY = 0
 frequencies = DATA.read.split.map(&:to_i)

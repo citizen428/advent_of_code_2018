@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "set"
 
 box_ids = DATA.read.split.map(&:each_char)

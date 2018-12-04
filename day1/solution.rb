@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "set"
 
 STARTING_FREQUENCY = 0

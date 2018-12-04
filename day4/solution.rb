@@ -1,11 +1,13 @@
-require 'date'
+# frozen_string_literal: true
+
+require "date"
 
 TIMESTAMP_REGEX = /\d{4}-\d{2}-\d{2} \d{2}:\d{2}/.freeze
 ID_REGEX = /#(?<id>\d+)/.freeze
 MINUTE_REGEX = /(?<minutes>\d\d)\]/.freeze
 
 records = DATA.readlines.sort_by { |line| DateTime.parse(line[TIMESTAMP_REGEX]) }
-grouped_records = records.chunk_while { |_l, i| i !~ /Guard/ }
+grouped_records = records.chunk_while { |_l1, l2| l2 !~ /Guard/ }
 
 sleep_ranges = Hash.new { |h, k| h[k] = [] }
 grouped_records.each do |records|

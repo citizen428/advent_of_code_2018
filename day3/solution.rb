@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 CLAIM_REGEX =
   /#(?<id>\d+) @ (?<offset_x>\d+),(?<offset_y>\d+): (?<delta_x>\d+)x(?<delta_y>\d+)/.freeze
 
